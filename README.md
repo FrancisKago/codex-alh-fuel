@@ -23,6 +23,17 @@ service worker and local caching.
    ```sh
    cd frontend
    npm install
+
+This repository contains the source code for a fuel management application for Groupe ALH.
+It is built with Next.js and Supabase.
+
+## Getting Started
+
+1. Install Node.js 20+
+2. Copy `frontend/.env.example` to `frontend/.env` and fill in your Supabase credentials.
+3. Install dependencies:
+   ```sh
+   cd frontend && npm install
    ```
 4. Run the development server:
    ```sh
@@ -53,8 +64,21 @@ A basic service worker is registered in `_app.tsx` to cache assets and API
 responses. Pending transactions can be stored in IndexedDB and synchronized when
 connectivity returns.
 
+Run `npm test` from the `frontend` directory to execute unit tests.
+
+## License
+
+This project is licensed under the MIT License.
+
+## Offline Support
+
+A basic service worker is registered in `_app.tsx` to cache assets and API responses. Pending transactions can be stored in IndexedDB and synchronized when connectivity returns.
+See [LICENSE](LICENSE) for license details.
+
+
 ## Contributing
 
 1. Fork the repository and create a feature branch.
 2. Ensure `npm test` and `npm run lint` pass before opening a pull request.
 3. Describe your changes clearly in the PR description.
+
