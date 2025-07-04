@@ -21,3 +21,48 @@ L’application prend en charge l’utilisation hors ligne grâce à un service 
    ```sh
    cd frontend
    npm install
+   ```
+4. Lancer le serveur de développement :
+   ```sh
+   npm run dev
+   ```
+5. Construire pour la production :
+   ```sh
+   npm run build
+   ```
+
+## Base de Données
+
+Les fichiers de schéma SQL sont situés dans le répertoire `database/`.  
+Appliquez-les à votre projet Supabase pour créer les tables nécessaires.
+
+## Tests
+
+Exécutez les tests unitaires avec :
+
+```sh
+cd frontend
+npm test
+```
+
+Effectuez une vérification de style avec :
+
+```sh
+npm run lint
+```
+
+## Licence
+
+Ce projet est sous licence MIT.  
+Voir le fichier [LICENSE](LICENSE) pour plus de détails.
+
+## Support Hors Ligne
+
+Un service worker de base est enregistré dans `_app.tsx` pour mettre en cache les ressources et les réponses des API.  
+Les transactions en attente peuvent être stockées dans **IndexedDB** et synchronisées une fois la connexion rétablie.
+
+## Contribution
+
+1. Forkez le dépôt et créez une branche de fonctionnalité.
+2. Assurez-vous que `npm test` et `npm run lint` passent avant d’ouvrir une pull request.
+3. Décrivez clairement vos modifications dans la description de la PR.
