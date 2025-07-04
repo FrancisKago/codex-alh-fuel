@@ -12,6 +12,7 @@ create table if not exists user_permissions (
   primary key (user_id, permission_type)
 );
 
+=======
 -- Vehicles
 create table if not exists vehicles (
   id uuid primary key,

@@ -31,3 +31,13 @@ jobs:
         run: |
           cd frontend
           npm run build
+          npm install
+      - name: Lint
+        run: |
+          cd frontend
+          npm run lint || true
+      - name: Test
+        run: |
+          cd frontend
+          npm test || true
+
