@@ -11,6 +11,16 @@ export default function Home() {
           body: JSON.stringify(item),
         });
       });
+      flushPending('requests', async (item) => {
+        await fetch('/api/request', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(item),
+        });
+      });
+    }
+  }, []);
+
     }
   }, []);
 

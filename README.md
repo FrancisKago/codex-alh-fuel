@@ -16,6 +16,8 @@ requests or viewing analytics.
 - Email/password authentication with Supabase
 - Role-based access control (chauffeur, pompiste, superviseur, DG, etc.)
 - Offline caching of fuel transactions and automatic sync when back online
+- Basic API endpoint to receive transactions and requests
+- Simple form to create fuel requests with offline support
 - Basic API endpoint to receive transactions
 
 ## Getting Started
@@ -53,13 +55,12 @@ L’application prend en charge l’utilisation hors ligne grâce à un service 
    ```sh
    npm run dev
    ```
-5. Build for production:
-=======
 4. Lancer le serveur de développement :
    ```sh
    npm run dev
    ```
 5. Construire pour la production :
+
    ```sh
    npm run build
    ```
@@ -90,7 +91,7 @@ synchronize them once connectivity is restored.
 1. Fork the repository and create a feature branch.
 2. Ensure `npm test` and `npm run lint` pass before opening a pull request.
 3. Describe your changes clearly in the PR description.
-=======
+
 ## Base de Données
 
 Les fichiers de schéma SQL sont situés dans le répertoire `database/`.  
@@ -126,4 +127,5 @@ Les transactions en attente peuvent être stockées dans **IndexedDB** et synchr
 1. Forkez le dépôt et créez une branche de fonctionnalité.
 2. Assurez-vous que `npm test` et `npm run lint` passent avant d’ouvrir une pull request.
 3. Décrivez clairement vos modifications dans la description de la PR.
+
 
