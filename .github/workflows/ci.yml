@@ -18,6 +18,19 @@ jobs:
       - name: Install dependencies
         run: |
           cd frontend
+          npm ci
+      - name: Lint
+        run: |
+          cd frontend
+          npm run lint
+      - name: Test
+        run: |
+          cd frontend
+          npm test
+      - name: Build
+        run: |
+          cd frontend
+          npm run build
           npm install
       - name: Lint
         run: |
@@ -27,3 +40,4 @@ jobs:
         run: |
           cd frontend
           npm test || true
+
