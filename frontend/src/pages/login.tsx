@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { signIn } from '../lib/auth';
 import { supabase } from '../lib/supabaseClient';
 
 export default function Login() {
@@ -8,6 +9,11 @@ export default function Login() {
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
+    try {
+      await signIn(email, password);
+      setMessage('Login successful');
+    } catch (err: any) {
+      setMessage(err.message);
     const { error } = await supabase.auth.signInWithPassword({ email, password });
     if (error) {
       setMessage(error.message);

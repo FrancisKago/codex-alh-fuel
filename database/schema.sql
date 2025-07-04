@@ -6,6 +6,13 @@ create table if not exists users (
   profile_data jsonb
 );
 
+create table if not exists user_permissions (
+  user_id uuid references users(id),
+  permission_type text,
+  primary key (user_id, permission_type)
+);
+
+=======
 -- Vehicles
 create table if not exists vehicles (
   id uuid primary key,
