@@ -1,4 +1,3 @@
-
 # Gestion de Carburant ALH
 
 ![CI](https://github.com/your-org/codex-alh-fuel/actions/workflows/ci.yml/badge.svg)

@@ -34,9 +34,7 @@ export default function Login() {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-        <button type="submit" className="bg-blue-500 text-white p-2">
-          Se connecter
-        </button>
+        <button type="submit" className="bg-blue-500 text-white p-2">Se connecter</button>
       </form>
       {message && <p className="mt-2 text-red-500">{message}</p>}
     </div>
