@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { signIn } from '../lib/auth';
-import { supabase } from '../lib/supabaseClient';
+
 export default function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -13,11 +13,6 @@ export default function Login() {
       setMessage('Login successful');
     } catch (err: any) {
       setMessage(err.message);
-    const { error } = await supabase.auth.signInWithPassword({ email, password });
-    if (error) {
-      setMessage(error.message);
-    } else {
-      setMessage('Login successful');
     }
   };
 
@@ -39,7 +34,9 @@ export default function Login() {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-        <button type="submit" className="bg-blue-500 text-white p-2">Se connecter</button>
+        <button type="submit" className="bg-blue-500 text-white p-2">
+          Se connecter
+        </button>
       </form>
       {message && <p className="mt-2 text-red-500">{message}</p>}
     </div>
