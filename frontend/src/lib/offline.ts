@@ -10,6 +10,9 @@ export const flushPending = async (
 ) => {
   const existing = JSON.parse(localStorage.getItem(key) || '[]');
   if (existing.length === 0) return;
+
+export const flushPending = async (key: string, callback: (item: any) => Promise<void>) => {
+  const existing = JSON.parse(localStorage.getItem(key) || '[]');
   for (const item of existing) {
     await callback(item);
   }
