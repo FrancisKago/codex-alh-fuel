@@ -66,3 +66,4 @@ Les transactions en attente peuvent être stockées dans **IndexedDB** et synchr
 2. Assurez-vous que `npm test` et `npm run lint` passent avant d’ouvrir une pull request.
 3. Décrivez clairement vos modifications dans la description de la PR.
 
+
