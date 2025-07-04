@@ -6,6 +6,13 @@ export default function Home() {
 
   useEffect(() => {
     const sync = () => {
+=======
+import { useEffect } from 'react';
+import { flushPending } from '../lib/offline';
+
+export default function Home() {
+  useEffect(() => {
+    if (navigator.onLine) {
       flushPending('fuel', async (item) => {
         await fetch('/api/fuel', {
           method: 'POST',
@@ -40,6 +47,7 @@ export default function Home() {
       window.removeEventListener('online', handleOnline);
       window.removeEventListener('offline', handleOffline);
     };
+    }
   }, []);
 
   return (
