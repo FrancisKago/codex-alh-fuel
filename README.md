@@ -1,3 +1,4 @@
+
 # Gestion de Carburant ALH
 
 ![CI](https://github.com/your-org/codex-alh-fuel/actions/workflows/ci.yml/badge.svg)
@@ -65,3 +66,4 @@ Les transactions en attente peuvent être stockées dans **IndexedDB** et synchr
 1. Forkez le dépôt et créez une branche de fonctionnalité.
 2. Assurez-vous que `npm test` et `npm run lint` passent avant d’ouvrir une pull request.
 3. Décrivez clairement vos modifications dans la description de la PR.
+
