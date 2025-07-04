@@ -1,9 +1,18 @@
 # ALH Fuel Management
 
+![CI](https://github.com/your-org/codex-alh-fuel/actions/workflows/ci.yml/badge.svg)
+
 This project implements a fuel management application for **Groupe ALH** as
 described in the PRD.  It uses **Next.js** for the frontend and **Supabase** for
 authentication and data storage.  The application supports offline usage via a
 service worker and local caching.
+
+## Features
+
+- Email/password authentication with Supabase
+- Role-based access control (chauffeur, pompiste, superviseur, DG, etc.)
+- Offline caching of fuel transactions and automatic sync when back online
+- Basic API endpoint to receive transactions
 
 ## Getting Started
 
@@ -14,7 +23,7 @@ service worker and local caching.
    ```sh
    cd frontend
    npm install
-=======
+
 This repository contains the source code for a fuel management application for Groupe ALH.
 It is built with Next.js and Supabase.
 
@@ -30,6 +39,10 @@ It is built with Next.js and Supabase.
    ```sh
    npm run dev
    ```
+5. Build for production:
+   ```sh
+   npm run build
+   ```
 
 ## Database
 
@@ -39,7 +52,18 @@ SQL schema files are located in the `database/` directory. Apply them in your Su
 
 Run `npm test` from the `frontend` directory to execute unit tests. Linting is
 performed with `npm run lint`.
-=======
+
+## License
+
+This project is licensed under the MIT License. See [LICENSE](LICENSE) for
+details.
+
+## Offline Support
+
+A basic service worker is registered in `_app.tsx` to cache assets and API
+responses. Pending transactions can be stored in IndexedDB and synchronized when
+connectivity returns.
+
 Run `npm test` from the `frontend` directory to execute unit tests.
 
 ## License
@@ -50,6 +74,7 @@ This project is licensed under the MIT License.
 
 A basic service worker is registered in `_app.tsx` to cache assets and API responses. Pending transactions can be stored in IndexedDB and synchronized when connectivity returns.
 See [LICENSE](LICENSE) for license details.
+
 
 ## Contributing
 
