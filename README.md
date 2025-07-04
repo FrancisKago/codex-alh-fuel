@@ -1,84 +1,56 @@
-# ALH Fuel Management
-
-![CI](https://github.com/your-org/codex-alh-fuel/actions/workflows/ci.yml/badge.svg)
-
-This project implements a fuel management application for **Groupe ALH** as
-described in the PRD.  It uses **Next.js** for the frontend and **Supabase** for
-authentication and data storage.  The application supports offline usage via a
-service worker and local caching.
-
-## Features
-
-- Email/password authentication with Supabase
-- Role-based access control (chauffeur, pompiste, superviseur, DG, etc.)
-- Offline caching of fuel transactions and automatic sync when back online
-- Basic API endpoint to receive transactions
-
-## Getting Started
-
-1. Install **Node.js 20+**.
-2. Copy `frontend/.env.example` to `frontend/.env` and fill in your Supabase
-   credentials.
-3. Install dependencies (requires internet access):
-   ```sh
-   cd frontend
-   npm install
-
-This repository contains the source code for a fuel management application for Groupe ALH.
-It is built with Next.js and Supabase.
-
-## Getting Started
-
-1. Install Node.js 20+
-2. Copy `frontend/.env.example` to `frontend/.env` and fill in your Supabase credentials.
-3. Install dependencies:
-   ```sh
-   cd frontend && npm install
-   ```
-4. Run the development server:
-   ```sh
-   npm run dev
-   ```
-5. Build for production:
-   ```sh
-   npm run build
-   ```
-
-## Database
-
-SQL schema files are located in the `database/` directory. Apply them in your Supabase project to create the required tables.
-
-## Tests
-
-Run `npm test` from the `frontend` directory to execute unit tests. Linting is
-performed with `npm run lint`.
-
-## License
-
-This project is licensed under the MIT License. See [LICENSE](LICENSE) for
-details.
-
-## Offline Support
-
-A basic service worker is registered in `_app.tsx` to cache assets and API
-responses. Pending transactions can be stored in IndexedDB and synchronized when
-connectivity returns.
-
-Run `npm test` from the `frontend` directory to execute unit tests.
-
-## License
-
-This project is licensed under the MIT License.
-
-## Offline Support
-
-A basic service worker is registered in `_app.tsx` to cache assets and API responses. Pending transactions can be stored in IndexedDB and synchronized when connectivity returns.
-See [LICENSE](LICENSE) for license details.
+Gestion de Carburant ALH
 
 
-## Contributing
+Ce projet met en œuvre une application de gestion de carburant pour Groupe ALH, comme décrit dans le document de spécification (PRD). Il utilise Next.js pour le frontend et Supabase pour l’authentification et le stockage des données. L’application prend en charge l’utilisation hors ligne grâce à un service worker et une mise en cache locale.
 
-1. Fork the repository and create a feature branch.
-2. Ensure `npm test` and `npm run lint` pass before opening a pull request.
-3. Describe your changes clearly in the PR description.
+Fonctionnalités
+Authentification par email/mot de passe avec Supabase
 
+Contrôle d’accès basé sur les rôles (chauffeur, pompiste, superviseur, DG, etc.)
+
+Mise en cache hors ligne des transactions de carburant et synchronisation automatique lors du retour de la connexion
+
+Endpoint API de base pour la réception des transactions
+
+Démarrage
+Installer Node.js 20+
+
+Copier frontend/.env.example vers frontend/.env et y renseigner vos identifiants Supabase
+
+Installer les dépendances (connexion internet requise) :
+
+sh
+Copy
+Edit
+cd frontend
+npm install
+Lancer le serveur de développement :
+
+sh
+Copy
+Edit
+npm run dev
+Construire pour la production :
+
+sh
+Copy
+Edit
+npm run build
+Base de Données
+Les fichiers de schéma SQL sont situés dans le répertoire database/. Appliquez-les à votre projet Supabase pour créer les tables nécessaires.
+
+Tests
+Exécutez npm test dans le répertoire frontend pour lancer les tests unitaires. Le linting peut être effectué avec npm run lint.
+
+Licence
+Ce projet est sous licence MIT. Voir le fichier LICENSE pour plus de détails.
+
+Support Hors Ligne
+Un service worker de base est enregistré dans _app.tsx pour mettre en cache les ressources et les réponses des API. Les transactions en attente peuvent être stockées dans IndexedDB et synchronisées une fois la connexion rétablie.
+
+Contribution
+Forkez le dépôt et créez une branche de fonctionnalité.
+
+Assurez-vous que npm test et npm run lint passent avant d’ouvrir une pull request.
+
+Décrivez clairement vos modifications dans la description de la PR.
