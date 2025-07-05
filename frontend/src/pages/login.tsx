@@ -13,6 +13,8 @@ export default function Login() {
       setMessage('Login successful');
     } catch (err) {
       setMessage((err as Error).message);
+    } catch (err: any) {
+      setMessage(err.message);
     }
   };
 
