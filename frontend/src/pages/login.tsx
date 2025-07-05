@@ -11,6 +11,8 @@ export default function Login() {
     try {
       await signIn(email, password);
       setMessage('Login successful');
+    } catch (err) {
+      setMessage((err as Error).message);
     } catch (err: any) {
       setMessage(err.message);
     }

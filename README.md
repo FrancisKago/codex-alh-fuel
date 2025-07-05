@@ -18,7 +18,8 @@ L’application prend en charge l’utilisation hors ligne grâce à un service 
 1. Installer **Node.js 20+**
 2. Copier `frontend/.env.example` vers `frontend/.env` et y renseigner vos identifiants Supabase
 3. Installer les dépendances :
-   ```sh
+
+  ```sh
    cd frontend
    npm install
    ```
