@@ -18,7 +18,8 @@ L’application prend en charge l’utilisation hors ligne grâce à un service 
 1. Installer **Node.js 20+**
 2. Copier `frontend/.env.example` vers `frontend/.env` et y renseigner vos identifiants Supabase
 3. Installer les dépendances :
-   ```sh
+
+  ```sh
    cd frontend
    npm install
    ```
@@ -65,5 +66,4 @@ Les transactions en attente peuvent être stockées dans **IndexedDB** et synchr
 1. Forkez le dépôt et créez une branche de fonctionnalité.
 2. Assurez-vous que `npm test` et `npm run lint` passent avant d’ouvrir une pull request.
 3. Décrivez clairement vos modifications dans la description de la PR.
-
 

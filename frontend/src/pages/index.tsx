@@ -6,7 +6,6 @@ export default function Home() {
 
   useEffect(() => {
     const sync = () => {
-=======
 import { useEffect } from 'react';
 import { flushPending } from '../lib/offline';
 
